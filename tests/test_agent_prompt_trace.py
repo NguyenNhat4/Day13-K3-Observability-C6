@@ -55,5 +55,8 @@ def test_agent_links_prompt_version_to_trace_and_generation(monkeypatch) -> None
         "prompt_version": "3",
         "prompt_source": "langfuse",
     }
+    trace_updates = client.trace_updates[-1]
+    assert trace_updates["input"] == {"message": "Explain traces"}
+    assert trace_updates["output"]["answer"].startswith("Starter answer.")
     assert generation_update["prompt"] is client.prompt
     assert generation_update["metadata"]["prompt_version"] == "3"

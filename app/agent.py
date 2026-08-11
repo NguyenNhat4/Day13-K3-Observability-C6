@@ -26,7 +26,12 @@ class LabAgent:
         self.model = model
         self.llm = FakeLLM(model=model)
 
-    @observe(as_type="generation", capture_input=False, capture_output=False)
+    @observe(
+        name="generate-response",
+        as_type="generation",
+        capture_input=False,
+        capture_output=False,
+    )
     def run(self, user_id: str, feature: str, session_id: str, message: str) -> AgentResult:
         started = time.perf_counter()
         docs = retrieve(message)
@@ -47,6 +52,8 @@ class LabAgent:
             user_id=hash_user_id(user_id),
             session_id=session_id,
             tags=["lab", feature, self.model],
+            input={"message": summarize_text(message)},
+            output={"answer": summarize_text(response.text)},
             metadata={
                 "prompt_name": prompt.name,
                 "prompt_label": prompt.label,
