@@ -2,7 +2,7 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: C6
 - Repository URL: `https://github.com/NguyenNhat4/Day13-K3-Observability-C6`
 - Commit SHA cuối: `4ea98c9`
 - Thành viên và vai trò:
