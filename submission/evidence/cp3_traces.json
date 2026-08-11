@@ -1,0 +1,557 @@
+[
+  {
+    "trace_id": "a432ecf595e58fcc03c82c91f12ac2e0",
+    "trace_url": "https://cloud.langfuse.com/project/cmso2lzdo03pzad0fbogsbjhs/traces/a432ecf595e58fcc03c82c91f12ac2e0",
+    "name": "chat-response",
+    "session_id": "k3-challenge-s01",
+    "user_id": "026c7a407135",
+    "tags": [
+      "claude-sonnet-4-5",
+      "feature:refund",
+      "lab"
+    ],
+    "input": {
+      "message": "What is your refund policy?",
+      "feature": "refund"
+    },
+    "output": {
+      "answer": "Starter answer. Teams should improve this output logic and add better quality ch...",
+      "quality_score": 0.9
+    },
+    "metadata": {
+      "app": "day13-observability-lab",
+      "feature": "refund",
+      "model": "claude-sonnet-4-5",
+      "correlation_id": "req-f71e706a",
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "prompt_fetch_error": "LangfuseFallback",
+      "latency_ms": 5216,
+      "tokens_in": 29,
+      "tokens_out": 165,
+      "cost_usd": 0.002562
+    },
+    "observations": [
+      {
+        "id": "920a580f8a088d34",
+        "name": "generate-response",
+        "type": "GENERATION",
+        "start_time": "2026-08-11 07:24:32.331000+00:00",
+        "end_time": "2026-08-11 07:24:32.482000+00:00",
+        "latency_ms": 151.0,
+        "model": "claude-sonnet-4-5",
+        "usage": "input=0 output=0 total=194 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "doc_count": 1,
+          "query_preview": "What is your refund policy?"
+        }
+      },
+      {
+        "id": "6f93e05c2a825e28",
+        "name": "retrieve-context",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:27.266000+00:00",
+        "end_time": "2026-08-11 07:24:29.766000+00:00",
+        "latency_ms": 2500.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "doc_count": 1
+        }
+      },
+      {
+        "id": "b3e01ed4f79e4c01",
+        "name": "chat-response",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:27.265000+00:00",
+        "end_time": "2026-08-11 07:24:32.483000+00:00",
+        "latency_ms": 5218.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "app": "day13-observability-lab",
+          "feature": "refund",
+          "model": "claude-sonnet-4-5",
+          "correlation_id": "req-f71e706a",
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "latency_ms": 5216,
+          "tokens_in": 29,
+          "tokens_out": 165,
+          "cost_usd": 0.002562
+        }
+      },
+      {
+        "id": "ea96ee17797b8ad0",
+        "name": "resolve-prompt",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:29.767000+00:00",
+        "end_time": "2026-08-11 07:24:32.330000+00:00",
+        "latency_ms": 2563.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback"
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "0020b19653db5d9897fec83d1b0fe762",
+    "trace_url": "https://cloud.langfuse.com/project/cmso2lzdo03pzad0fbogsbjhs/traces/0020b19653db5d9897fec83d1b0fe762",
+    "name": "chat-response",
+    "session_id": "k3-challenge-s02",
+    "user_id": "867738e76862",
+    "tags": [
+      "claude-sonnet-4-5",
+      "feature:refund",
+      "lab"
+    ],
+    "input": {
+      "message": "What proof is required for a refund?",
+      "feature": "refund"
+    },
+    "output": {
+      "answer": "Starter answer. Teams should improve this output logic and add better quality ch...",
+      "quality_score": 0.9
+    },
+    "metadata": {
+      "app": "day13-observability-lab",
+      "feature": "refund",
+      "model": "claude-sonnet-4-5",
+      "correlation_id": "req-0be80050",
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "prompt_fetch_error": "LangfuseFallback",
+      "latency_ms": 5572,
+      "tokens_in": 31,
+      "tokens_out": 97,
+      "cost_usd": 0.001548
+    },
+    "observations": [
+      {
+        "id": "1e76773fe6e2c520",
+        "name": "generate-response",
+        "type": "GENERATION",
+        "start_time": "2026-08-11 07:24:27.109000+00:00",
+        "end_time": "2026-08-11 07:24:27.260000+00:00",
+        "latency_ms": 151.0,
+        "model": "claude-sonnet-4-5",
+        "usage": "input=0 output=0 total=128 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "doc_count": 1,
+          "query_preview": "What proof is required for a refund?"
+        }
+      },
+      {
+        "id": "27892e629364ba8f",
+        "name": "resolve-prompt",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:24.189000+00:00",
+        "end_time": "2026-08-11 07:24:27.109000+00:00",
+        "latency_ms": 2920.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback"
+        }
+      },
+      {
+        "id": "78e59af5fdf6f2e6",
+        "name": "chat-response",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:21.688000+00:00",
+        "end_time": "2026-08-11 07:24:27.261000+00:00",
+        "latency_ms": 5573.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "app": "day13-observability-lab",
+          "feature": "refund",
+          "model": "claude-sonnet-4-5",
+          "correlation_id": "req-0be80050",
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "latency_ms": 5572,
+          "tokens_in": 31,
+          "tokens_out": 97,
+          "cost_usd": 0.001548
+        }
+      },
+      {
+        "id": "a4d7e3fc1af118f1",
+        "name": "retrieve-context",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:21.688000+00:00",
+        "end_time": "2026-08-11 07:24:24.189000+00:00",
+        "latency_ms": 2501.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "doc_count": 1
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "52d272ff87a25d198a29974e2d93d01d",
+    "trace_url": "https://cloud.langfuse.com/project/cmso2lzdo03pzad0fbogsbjhs/traces/52d272ff87a25d198a29974e2d93d01d",
+    "name": "chat-response",
+    "session_id": "k3-challenge-s03",
+    "user_id": "b7fde6ae11b0",
+    "tags": [
+      "claude-sonnet-4-5",
+      "feature:refund",
+      "lab"
+    ],
+    "input": {
+      "message": "Explain the refund window and required evidence.",
+      "feature": "refund"
+    },
+    "output": {
+      "answer": "Starter answer. Teams should improve this output logic and add better quality ch...",
+      "quality_score": 0.8
+    },
+    "metadata": {
+      "app": "day13-observability-lab",
+      "feature": "refund",
+      "model": "claude-sonnet-4-5",
+      "correlation_id": "req-f58c92b9",
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "prompt_fetch_error": "LangfuseFallback",
+      "latency_ms": 3736,
+      "tokens_in": 34,
+      "tokens_out": 100,
+      "cost_usd": 0.001602
+    },
+    "observations": [
+      {
+        "id": "785dd78f942d37ed",
+        "name": "generate-response",
+        "type": "GENERATION",
+        "start_time": "2026-08-11 07:24:21.529000+00:00",
+        "end_time": "2026-08-11 07:24:21.681000+00:00",
+        "latency_ms": 152.0,
+        "model": "claude-sonnet-4-5",
+        "usage": "input=0 output=0 total=134 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "doc_count": 1,
+          "query_preview": "Explain the refund window and required evidence."
+        }
+      },
+      {
+        "id": "2d97a46c3d766d46",
+        "name": "chat-response",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:17.945000+00:00",
+        "end_time": "2026-08-11 07:24:21.682000+00:00",
+        "latency_ms": 3737.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "app": "day13-observability-lab",
+          "feature": "refund",
+          "model": "claude-sonnet-4-5",
+          "correlation_id": "req-f58c92b9",
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "latency_ms": 3736,
+          "tokens_in": 34,
+          "tokens_out": 100,
+          "cost_usd": 0.001602
+        }
+      },
+      {
+        "id": "333252fa67e5060e",
+        "name": "resolve-prompt",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:20.447000+00:00",
+        "end_time": "2026-08-11 07:24:21.528000+00:00",
+        "latency_ms": 1081.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback"
+        }
+      },
+      {
+        "id": "e229532ba1094819",
+        "name": "retrieve-context",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:17.945000+00:00",
+        "end_time": "2026-08-11 07:24:20.446000+00:00",
+        "latency_ms": 2501.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "doc_count": 1
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "cc357af076ef1f1b68a4b9abfb41aedd",
+    "trace_url": "https://cloud.langfuse.com/project/cmso2lzdo03pzad0fbogsbjhs/traces/cc357af076ef1f1b68a4b9abfb41aedd",
+    "name": "chat-response",
+    "session_id": "k3-challenge-s04",
+    "user_id": "026017618b2c",
+    "tags": [
+      "claude-sonnet-4-5",
+      "feature:refund",
+      "lab"
+    ],
+    "input": {
+      "message": "Can a customer request a refund after purchase?",
+      "feature": "refund"
+    },
+    "output": {
+      "answer": "Starter answer. Teams should improve this output logic and add better quality ch...",
+      "quality_score": 0.9
+    },
+    "metadata": {
+      "app": "day13-observability-lab",
+      "feature": "refund",
+      "model": "claude-sonnet-4-5",
+      "correlation_id": "req-e58fd000",
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "prompt_fetch_error": "LangfuseFallback",
+      "latency_ms": 5020,
+      "tokens_in": 34,
+      "tokens_out": 148,
+      "cost_usd": 0.002322
+    },
+    "observations": [
+      {
+        "id": "aa128b4f69532da3",
+        "name": "generate-response",
+        "type": "GENERATION",
+        "start_time": "2026-08-11 07:24:12.542000+00:00",
+        "end_time": "2026-08-11 07:24:12.694000+00:00",
+        "latency_ms": 152.0,
+        "model": "claude-sonnet-4-5",
+        "usage": "input=0 output=0 total=182 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "doc_count": 1,
+          "query_preview": "Can a customer request a refund after purchase?"
+        }
+      },
+      {
+        "id": "15bff8c6d27eca5c",
+        "name": "chat-response",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:08.477000+00:00",
+        "end_time": "2026-08-11 07:24:12.694000+00:00",
+        "latency_ms": 4217.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "app": "day13-observability-lab",
+          "feature": "refund",
+          "model": "claude-sonnet-4-5",
+          "correlation_id": "req-e58fd000",
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "latency_ms": 5020,
+          "tokens_in": 34,
+          "tokens_out": 148,
+          "cost_usd": 0.002322
+        }
+      },
+      {
+        "id": "3ccbdb4e126a1f82",
+        "name": "retrieve-context",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:08.477000+00:00",
+        "end_time": "2026-08-11 07:24:10.978000+00:00",
+        "latency_ms": 2501.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "doc_count": 1
+        }
+      },
+      {
+        "id": "5dfdd448340ae075",
+        "name": "resolve-prompt",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:10.978000+00:00",
+        "end_time": "2026-08-11 07:24:12.542000+00:00",
+        "latency_ms": 1564.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback"
+        }
+      }
+    ]
+  },
+  {
+    "trace_id": "1d3f8f323d0620c6f89ada18576f8981",
+    "trace_url": "https://cloud.langfuse.com/project/cmso2lzdo03pzad0fbogsbjhs/traces/1d3f8f323d0620c6f89ada18576f8981",
+    "name": "chat-response",
+    "session_id": "k3-challenge-s05",
+    "user_id": "5da42a0d3d01",
+    "tags": [
+      "claude-sonnet-4-5",
+      "feature:refund",
+      "lab"
+    ],
+    "input": {
+      "message": "Summarize the refund policy for a support agent.",
+      "feature": "refund"
+    },
+    "output": {
+      "answer": "Starter answer. Teams should improve this output logic and add better quality ch...",
+      "quality_score": 0.8
+    },
+    "metadata": {
+      "app": "day13-observability-lab",
+      "feature": "refund",
+      "model": "claude-sonnet-4-5",
+      "correlation_id": "req-9253c7c5",
+      "prompt_name": "day13-chat",
+      "prompt_label": "production",
+      "prompt_version": "local-v1",
+      "prompt_source": "local-fallback",
+      "prompt_fetch_error": "LangfuseFallback",
+      "latency_ms": 5240,
+      "tokens_in": 34,
+      "tokens_out": 149,
+      "cost_usd": 0.002337
+    },
+    "observations": [
+      {
+        "id": "5784ad386bff10c9",
+        "name": "generate-response",
+        "type": "GENERATION",
+        "start_time": "2026-08-11 07:24:17.788000+00:00",
+        "end_time": "2026-08-11 07:24:17.939000+00:00",
+        "latency_ms": 151.0,
+        "model": "claude-sonnet-4-5",
+        "usage": "input=0 output=0 total=183 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "doc_count": 1,
+          "query_preview": "Summarize the refund policy for a support agent."
+        }
+      },
+      {
+        "id": "2c91a2040f00a28a",
+        "name": "chat-response",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:12.698000+00:00",
+        "end_time": "2026-08-11 07:24:17.940000+00:00",
+        "latency_ms": 5242.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "app": "day13-observability-lab",
+          "feature": "refund",
+          "model": "claude-sonnet-4-5",
+          "correlation_id": "req-9253c7c5",
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback",
+          "latency_ms": 5240,
+          "tokens_in": 34,
+          "tokens_out": 149,
+          "cost_usd": 0.002337
+        }
+      },
+      {
+        "id": "7115de3c68d832b1",
+        "name": "resolve-prompt",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:15.201000+00:00",
+        "end_time": "2026-08-11 07:24:17.787000+00:00",
+        "latency_ms": 2586.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "prompt_name": "day13-chat",
+          "prompt_label": "production",
+          "prompt_version": "local-v1",
+          "prompt_source": "local-fallback",
+          "prompt_fetch_error": "LangfuseFallback"
+        }
+      },
+      {
+        "id": "ea3ef167a0511a04",
+        "name": "retrieve-context",
+        "type": "SPAN",
+        "start_time": "2026-08-11 07:24:12.699000+00:00",
+        "end_time": "2026-08-11 07:24:15.200000+00:00",
+        "latency_ms": 2501.0,
+        "model": null,
+        "usage": "input=0 output=0 total=0 unit=<ModelUsageUnit.TOKENS: 'TOKENS'> input_cost=None output_cost=None total_cost=None",
+        "metadata": {
+          "doc_count": 1
+        }
+      }
+    ]
+  }
+]

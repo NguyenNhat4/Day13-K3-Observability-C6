@@ -24,9 +24,12 @@ def test_chat_response_log_exposes_quality_for_dashboard(
                 "feature": "qa",
                 "message": "Explain observability",
             },
+            headers={"x-request-id": "req-testchat"},
         )
 
     assert response.status_code == 200
+    assert response.json()["correlation_id"] == "req-testchat"
     events = [json.loads(line) for line in log_path.read_text(encoding="utf-8").splitlines()]
     response_event = next(event for event in events if event["event"] == "response_sent")
+    assert response_event["correlation_id"] == "req-testchat"
     assert response_event["quality_score"] == response.json()["quality_score"]

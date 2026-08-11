@@ -44,6 +44,7 @@ async def metrics() -> dict:
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: Request, body: ChatRequest) -> ChatResponse:
+    correlation_id = getattr(request.state, "correlation_id", "req-missing")
     bind_contextvars(
         user_id_hash=hash_user_id(body.user_id),
         session_id=body.session_id,
@@ -63,6 +64,7 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
             feature=body.feature,
             session_id=body.session_id,
             message=body.message,
+            correlation_id=correlation_id,
         )
         log.info(
             "response_sent",
@@ -76,7 +78,7 @@ async def chat(request: Request, body: ChatRequest) -> ChatResponse:
         )
         return ChatResponse(
             answer=result.answer,
-            correlation_id=request.state.correlation_id,
+            correlation_id=correlation_id,
             latency_ms=result.latency_ms,
             tokens_in=result.tokens_in,
             tokens_out=result.tokens_out,
