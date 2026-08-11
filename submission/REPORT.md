@@ -108,8 +108,8 @@
 
 ## 7. Đóng góp cá nhân
 
-| Thành viên | Phần việc | Commit/PR | Điều đã học |
-|---|---|---|---|
-| Nguyễn Minh Phú | CP1 - Logging & PII: hoàn thiện correlation ID, log enrichment, PII redaction và chạy validate log. | `c66b5d7` (`Checkpoint1`), `7a57bfb` (`fix: detect and redact Vietnamese phone PII`) | Log phải có context đầy đủ trước khi debug incident; PII cần được scrub trước khi render JSON log; correlation ID là khóa để nối request, response và evidence. |
-| Nguyễn Minh Nhật | CP2 - Metrics, traces, dashboard và prompt observability: tạo trace trên Langfuse, bổ sung metadata tracing, chuẩn bị dashboard/evidence và prompt observability workflow. | `f1a02e5` (`feat: add dashboard and prompt observability workflow`), `da1ad4b` (`feat: enhance observability with response tracing and add new evidence images`) | Trace cần metadata `prompt_name`, `prompt_label`, `prompt_version`; dashboard phải bám đúng 6 panel trong contract; metrics giúp phát hiện triệu chứng trước khi mở trace. |
+| Thành viên        | Phần việc | Commit/PR | Điều đã học |
+|-------------------|---|---|---|
+| Giang Minh Phú    | CP1 - Logging & PII: hoàn thiện correlation ID, log enrichment, PII redaction và chạy validate log. | `c66b5d7` (`Checkpoint1`), `7a57bfb` (`fix: detect and redact Vietnamese phone PII`) | Log phải có context đầy đủ trước khi debug incident; PII cần được scrub trước khi render JSON log; correlation ID là khóa để nối request, response và evidence. |
+| Nguyễn Minh Nhật  | CP2 - Metrics, traces, dashboard và prompt observability: tạo trace trên Langfuse, bổ sung metadata tracing, chuẩn bị dashboard/evidence và prompt observability workflow. | `f1a02e5` (`feat: add dashboard and prompt observability workflow`), `da1ad4b` (`feat: enhance observability with response tracing and add new evidence images`) | Trace cần metadata `prompt_name`, `prompt_label`, `prompt_version`; dashboard phải bám đúng 6 panel trong contract; metrics giúp phát hiện triệu chứng trước khi mở trace. |
 | Nguyễn Tiến Thành | CP3 - Chạy challenge chính thức, bật/tắt incident `rag_slow`, thu metrics/log/trace evidence, xác định root cause và viết phần điều tra trong report. | CP3 evidence trong `submission/evidence/cp3_*`; trace chính `0020b19653db5d9897fec83d1b0fe762`; report cập nhật tại `submission/REPORT.md`. | Biết cách điều tra theo luồng Metrics → Traces → Logs → Root cause; dùng `correlation_id` để nối log với trace; phân biệt latency do RAG retrieval với latency do LLM generation. |
