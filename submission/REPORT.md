@@ -51,5 +51,5 @@
 Với mỗi thành viên, ghi rõ nhiệm vụ và link commit/PR tương ứng.
 
 | Thành viên | Phần việc | Commit/PR | Điều đã học |
-|---|---|---|---|
+|Nguyễn Minh Nhât |Prompt versioning,Dashboard, SLO|da1ad4be188ba73451cc12e0a79380651ac1177b|log vao langfuse, thiết lập các version cho prompt|
 | | | | |
